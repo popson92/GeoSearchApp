@@ -19,17 +19,25 @@
 input[type="button"] {
     border: 2px solid skyblue;
     height: 32px;
-    width: 50px;
+    width: 68px;
     border-radius: 5px 5px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: #fff;
   }
+  input[value="Search"] {
+    color: grey;
+  }
+
   
-  input[type="text"] {
+  input[type="text"], input[type="text"]:start {
+    text-align: justify;
     color: skyblue;
     font-style: normal;
     font-weight: bold;
     cursor: pointer;
-    width: 220px;
-    border: 2px solid skyblue;
+    width: 240px;
+    border:  1px solid skyblue;
     height: 32px;
   }
   
