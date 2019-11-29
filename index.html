@@ -6,25 +6,16 @@
     <title>GeoSearch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="nav-container">
-        <nav class="navbar">
-            <span class="navbar-toggle X-menu" id="js-navbar-toggle">
-                <strong>X</strong>
-            </span>
-            <a href="#" class="logo">GeoSearch</a>
-            <ul class="main-nav" id="js-menu">
-                <li>
-                    <input type="text" results=5 autosave=some_unique_value placeholder="city name" autocomplete="country-name">
-                    <button type="submit" class="searchButton">
-                        Search
-                    </button>
-                </li>
-            </ul>
-        </nav>
+    <div class="topView">
+            <h3>GeoSearch</h3>
+            <div id="searchBut">
+                <input type="text" placeholder="Search for your palce of Interest">
+                <input type="button" value="Search">
+            </div>
     </div>
 
     <!-- Map container & weather condition -->

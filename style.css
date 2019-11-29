@@ -7,11 +7,30 @@
   body {
     font-family: "Josefin Sans", sans-serif;
   }
-  
-  .navbar {
+.topView {
     font-size: 18px;
-    background-color: green;
-    padding-bottom: 10px;
+    display: flex;
+    width: 100%;
+    background-color: #235566;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+input[type="button"] {
+    border: 2px solid skyblue;
+    height: 32px;
+    width: 50px;
+    border-radius: 5px 5px;
+  }
+  
+  input[type="text"] {
+    color: skyblue;
+    font-style: normal;
+    font-weight: bold;
+    cursor: pointer;
+    width: 220px;
+    border: 2px solid skyblue;
+    height: 32px;
   }
   
   .main-nav {
@@ -36,26 +55,8 @@
     margin-left: 20px;
   }
   
-  .navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 24px;
-  }
+
   
-  .active {
-    display: block;
-  }
-  
-  input[type="search"] {
-    color: skyblue;
-    text-align: right;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-  }
   
   @media screen and (min-width: 768px) {
     .navbar {
@@ -111,23 +112,7 @@
     display: table;
     clear: both;
   }
-  .conversion {
-      background: #01ee11;
-      width: 100%;
-      padding: 10px;
-      height: 200px;
-      color: darkolivegreen;
-      font-weight: bold;
   
-      }
-  .convert {
-      margin: 20px;
-      padding: 6px;
-      border: 2px solid skyblue;
-      border-radius: 18px;
-      color: #55dfaa;
-      
-  }
   #temp {
       padding: 3px;
       margin-left: 6px;
