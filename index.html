@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GeoSearch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,57 +11,65 @@
     <div class="topView">
             <h3>GeoSearch</h3>
             <div id="searchBut">
-                <input type="text" placeholder="Search for your place of Interest">
-                <input type="button" value="Search">
+                <input id="inputSearch" type="text" placeholder="Search for your place of Interest">
+                <input type="button" value="Search" onclick="convertToCoor()">
+            </div>
+            <div id="latLan">You will your Point of Interest geographic cordinnates here
             </div>
     </div>
-
+    <hr/>
     <!-- Map container & weather condition -->
     <div class="row">
         <div class="map">
-            <h1>Map container</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a quae non illo neque temporibus
-                voluptatum animi et officiis commodi alias ex enim placeat, tempora deserunt consectetur odio
-                perspiciatis natus.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum id nemo temporibus veritatis et officia
-                qui reiciendis exercitationem? Asperiores molestiae ad, excepturi odit porro deleniti perferendis ipsa.
-                Esse, rem iusto.
-
-            </p>
+            <h1>Your Map:</h1> <br/>
+            <img id="mapIn" >
         </div>
-
-        <!-- weather condition -->
-
-        <p class="siderbar">
-            <h1>Weather container</h1>
+        <div class="sidebar">
+            <h4>Coversion</h4>
             <!-- <div class="row"> -->
             <label for="temperature">
-                Input the ℃ value you want to convert:
-            </label>
-
-            Celsius: <input id="temp" type="number" placeholder="Enter the temperature" min="1" oninput="tempConverter(this.value)"
-                onchange="tempConverter(this.value)">
+             Input the value you want to convert:
+            </label><br/>
+            <input id="temp" type="number" placeholder="Enter the temperature" min="1">
+            <input list="conver" id="conVe" placeholder="Choose in °C or ℉">
+            <datalist id="conver">
+                <option value="℉"></option>
+                <option value="°C"></option>
+            </datalist>
+                <input type="button" value="Click" onclick="convertToCelsius(); convertToFahrenheit()">
+                <br />
+                <p class=" green">This is equal to :<span id="output℉"></span ></p>
 
             <br />
-
-            <p class=" green">This is equal to :<span id="output℉"></span><strong>℉</strong></p>
-
-            <br />
-            <table>
-                
-            </table>
-
-            <p class="center">Insert weather card
-                <hr />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est, deserunt natus quidem quos modi
-                non voluptatem, fuga architecto ipsum explicabo veniam rerum tempora dolorem repellendus nostrum iste
-                excepturi commodi!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odit harum tempora quo similique, quae,
-                asperiores, libero non ab facilis quisquam sint ipsam ratione. Dolor animi modi perferendis consectetur
-                aut? </p>
-
+            <div class="weath">
+                Your Weather Conditions:
+                <ul>
+                    <li><span id="windSpeed"></span></li>
+                    <li><span id="temp1"></span></li>
+                    <li><span id="pressure"></span></li>
+                    <li><span id="humidity"></span></li>
+                    <li><span id="temp_min"></span></li>
+                    <li><span id="temp_max"></span></li>
+                    <li><span id="weatherCond"></span></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <!-- end  git-->
+    <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+  <div class="fb-share-button" 
+    data-href="index.html" 
+    data-layout="button_count">
+  </div>
+
 
 
     <script src="main.js"></script>
