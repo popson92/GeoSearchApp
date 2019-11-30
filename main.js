@@ -19,7 +19,7 @@ let inputSearch = document.getElementById('inputSearch');
 //fetch('https://maps.googleapis.com/maps/api/geocode/json?address=inputSearch&key=AIzaSyC_AgddD3PBSw1OunhnHCh5A9y438OZpB8')
 function convertToCoor () {
   //let staticMap = 'https://www.mapquestapi.com/staticmap/v5/map?locations='+ inputSearch.value + '|marker&size=600,400@2x&key=n2oPuxX0QBp3dYl4qjZAbW7eoT6E9WPx';
-  const userValue = 'http://www.mapquestapi.com/geocoding/v1/address?key=JI099NKDq2fJHUmfV68XsEnUAq4G4npA&location='+ inputSearch.value;
+  const userValue = 'https://www.mapquestapi.com/geocoding/v1/address?key=JI099NKDq2fJHUmfV68XsEnUAq4G4npA&location='+ inputSearch.value;
 fetch(userValue)
 .then(data => data.json())
 .then(res => {
